@@ -7,15 +7,28 @@ class Customer extends User
 
 	private $phone;
 
-	function __construct()
+	public function __construct($phone)
 	{
-	}
-
-	function __destruct()
-	{
+		$this->phone = $phone;
 	}
 
 
+	/**
+	 * Get the value of phone
+	 */
+	public function getPhone()
+	{
+		return $this->phone;
+	}
 
+	/**
+	 * Set the value of phone
+	 */
+	public function setPhone($phone): self
+	{
+		$this->phone = $phone;
+
+		return $this;
+	}
 }
 ?>

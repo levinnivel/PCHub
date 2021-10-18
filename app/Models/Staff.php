@@ -7,15 +7,28 @@ class Staff extends User
 
 	private $salary;
 
-	function __construct()
+	public function __construct($salary)
 	{
+		$this->salary = $salary;
 	}
 
-	function __destruct()
+	
+	/**
+	 * Get the value of salary
+	 */
+	public function getSalary()
 	{
+		return $this->salary;
 	}
 
+	/**
+	 * Set the value of salary
+	 */
+	public function setSalary($salary): self
+	{
+		$this->salary = $salary;
 
-
+		return $this;
+	}
 }
 ?>
